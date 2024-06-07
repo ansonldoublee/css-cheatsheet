@@ -1,0 +1,119 @@
+*{
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+#heading-with-underline::after {
+    content: '';
+    display: block;
+    width:480px;
+    height: 20px;
+    background-color: #00FF00;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 88px;
+    z-index: -1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), transparent 2px),
+    radial-gradient(rgba(0, 0, 0, 0.5), transparent 2px);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+    background-attachment: fixed;
+
+}
+
+header {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    colour: white
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 16px;
+    max-width: 280px;
+    min-width: 200px;
+    padding: 0px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    border: 1px solid black;
+    border-style: solid;
+    margin-bottom: 16px;
+    background-color: white;
+    box-shadow: 8px 8px 0 #000000;
+}
+
+.card:hover {
+    box-shadow: 16px 16px 0 #00ff00;
+    transform: scale(1.05);
+    transform: translate(-8px, -8px);
+}
+
+.card:hover .code-section {
+    display: block;
+}
+
+.title-section{
+    margin: 8px;
+}
+
+.code-section{
+    min-height: 240px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    /* display: none; */
+}
+
+pre {
+    font-size: 12px;
+    margin: 4px;
+    padding: 8px;
+    line-height: 2;
+    white-space: pre-wrap;
+    color:#00ff00;
+    user-select: all;
+  }
+
+footer {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        min-width: 45%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    #heading-with-underline::after {
+        display: none;
+    }
+}
